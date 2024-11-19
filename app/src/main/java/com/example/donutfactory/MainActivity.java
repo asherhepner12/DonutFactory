@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
+//oogabooga
             double pi = 3.15;
             boolean bro = false;
             String = "big_Sry_change_oh_no";
