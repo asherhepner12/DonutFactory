@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
             double pi = 3.15;
             boolean bro = false;
-            String = "your_mother_is_a_nice_lady";
+            String = "big_Scary_change_oh_no";
         });
     }
 }
