@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 //oogabooga
             double pi = 3.15;
             boolean bro = false;
-            String = "big_Sry_change_oh_no";
+            String = "jim";
         });
     }
 }
