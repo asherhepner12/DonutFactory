@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
 
             double pi = 3.15;
+            String = "your_mother_is_a_nice_lady";
         });
     }
 }
