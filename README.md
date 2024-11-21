@@ -1,1 +1,1 @@
-reading is for nerds!!! 🤓
+reading is for nerds pt2!!! 🤓
