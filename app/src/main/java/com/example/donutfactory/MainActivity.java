@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
             double pi = 3.15;
             boolean bro = false;
             String  ooga = "mother_is_a_nice_lady";
+            int p = 0;
         });
     }
 }
