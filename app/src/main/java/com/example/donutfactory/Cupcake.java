@@ -11,7 +11,7 @@ public class Cupcake extends Pastry{
 
     @Override
     public int getImage() {
-        String donutImageName = baseChoice + "_" + icingChoice + "_" + sprinkleChoice + "_Cupcake";
+        String donutImageName = baseChoice + "_" + icingChoice + "_" + sprinkleChoice + "_cupcake";
         int Image = context.getResources().getIdentifier(donutImageName, "drawable", context.getPackageName());
         return Image;
     }

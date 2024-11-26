@@ -12,7 +12,7 @@ public class Donut extends Pastry{
 
     @Override
     public int getImage() {
-        String donutImageName = baseChoice + "_" + icingChoice + "_" + sprinkleChoice + "_Donut";
+        String donutImageName = baseChoice + "_" + icingChoice + "_" + sprinkleChoice + "_donut";
         int Image = context.getResources().getIdentifier(donutImageName, "drawable", context.getPackageName());
         return Image;
     }
