@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.394" />
 
     <ImageView
-        android:id="@+id/donutView1"
+        android:id="@+id/pastryView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -29,18 +29,18 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/donutView2"
+        android:id="@+id/pastryView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/donutView3"
+        app:layout_constraintEnd_toStartOf="@+id/pastryView3"
         app:layout_constraintHorizontal_bias="0.574"
-        app:layout_constraintStart_toEndOf="@+id/donutView1"
+        app:layout_constraintStart_toEndOf="@+id/pastryView1"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/donutView3"
+        android:id="@+id/pastryView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -50,40 +50,40 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/donutView4"
+        android:id="@+id/pastryView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/donutView7"
+        app:layout_constraintBottom_toTopOf="@+id/pastryView7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donutView1"
+        app:layout_constraintTop_toBottomOf="@+id/pastryView1"
         app:layout_constraintVertical_bias="0.507"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/donutView5"
+        android:id="@+id/pastryView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/donutView6"
-        app:layout_constraintStart_toEndOf="@+id/donutView4"
-        app:layout_constraintTop_toBottomOf="@+id/donutView2"
+        app:layout_constraintEnd_toStartOf="@+id/pastryView6"
+        app:layout_constraintStart_toEndOf="@+id/pastryView4"
+        app:layout_constraintTop_toBottomOf="@+id/pastryView2"
         app:layout_constraintVertical_bias="0.627"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/donutView6"
+        android:id="@+id/pastryView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/donutView9"
+        app:layout_constraintBottom_toTopOf="@+id/pastryView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donutView3"
+        app:layout_constraintTop_toBottomOf="@+id/pastryView3"
         app:layout_constraintVertical_bias="0.53"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/donutView7"
+        android:id="@+id/pastryView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -93,18 +93,18 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/donutView8"
+        android:id="@+id/pastryView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="328dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/donutView9"
+        app:layout_constraintEnd_toStartOf="@+id/pastryView9"
         app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toEndOf="@+id/donutView7"
+        app:layout_constraintStart_toEndOf="@+id/pastryView7"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/donutView9"
+        android:id="@+id/pastryView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -123,5 +123,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donutView8" />
+        app:layout_constraintTop_toBottomOf="@+id/pastryView8" />
 </androidx.constraintlayout.widget.ConstraintLayout>

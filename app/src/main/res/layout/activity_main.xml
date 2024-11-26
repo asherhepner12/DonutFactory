@@ -23,15 +23,15 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/donutView"
+        android:id="@+id/baseView"
         android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Donut Type"
+        android:text="Base Type"
         android:textAlignment="center"
         android:textColor="#5E35B1"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/donutSpinner"
+        app:layout_constraintBottom_toTopOf="@+id/baseSpinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,10 +52,23 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/pastryView"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="Pastry Type"
+        android:textAlignment="center"
+        android:textColor="#E7749E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pastrySpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/titleView"
         android:layout_width="384dp"
         android:layout_height="60dp"
-        android:text="Donut Baker"
+        android:text="Pastry Baker"
         android:textAlignment="center"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,10 +80,10 @@
 
     <!-- Spinner for donut type -->
     <Spinner
-        android:id="@+id/donutSpinner"
+        android:id="@+id/baseSpinner"
         android:layout_width="192dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="60dp"
         android:background="#E1BEE7"
         android:popupBackground="@color/material_dynamic_tertiary60"
         android:textAlignment="center"
@@ -84,7 +97,7 @@
         android:id="@+id/icingSpinner"
         android:layout_width="192dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="60dp"
         android:background="#BBDEFB"
         android:popupBackground="@color/material_dynamic_primary60"
         android:textAlignment="center"
@@ -98,8 +111,21 @@
         android:id="@+id/sprinkleSpinner"
         android:layout_width="192dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="60dp"
         android:background="#F0F4C3"
         android:popupBackground="@android:color/holo_orange_light"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/pastryView" />
+
+    <Spinner
+        android:id="@+id/pastrySpinner"
+        android:layout_width="192dp"
+        android:layout_height="48dp"
+        android:background="#E97194"
+        android:popupBackground="#E91E63"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

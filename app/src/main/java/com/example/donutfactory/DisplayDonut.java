@@ -19,15 +19,15 @@ import java.util.Arrays;
 
 public class DisplayDonut extends AppCompatActivity {
 
-    private ImageView donutView1;
-    private ImageView donutView2;
-    private ImageView donutView3;
-    private ImageView donutView4;
-    private ImageView donutView5;
-    private ImageView donutView6;
-    private ImageView donutView7;
-    private ImageView donutView8;
-    private ImageView donutView9;
+    private ImageView pastryView1;
+    private ImageView pastryView2;
+    private ImageView pastryView3;
+    private ImageView pastryView4;
+    private ImageView pastryView5;
+    private ImageView pastryView6;
+    private ImageView pastryView7;
+    private ImageView pastryView8;
+    private ImageView pastryView9;
 
     private Button backButton;
 
@@ -54,25 +54,26 @@ public class DisplayDonut extends AppCompatActivity {
 
 
         //Get donut choices from MainActivity
-        String donutChoice = getIntent().getStringExtra("donutChoice");
+        String baseChoice = getIntent().getStringExtra("baseChoice");
         String icingChoice = getIntent().getStringExtra("icingChoice");
         String sprinkleChoice = getIntent().getStringExtra("sprinkleChoice");
+        String pastryChoice = getIntent().getStringExtra("pastryChoice");
         //Create donut object from DonutBuilder factory class
-        Donut donut = DonutBuilder.getDonut(donutChoice, icingChoice, sprinkleChoice, this);
+        Pastry pastry = PastryBuilder.getPastry(baseChoice, icingChoice, sprinkleChoice, pastryChoice,this);
         //Get the numberOfDonuts made
-        int numberOfDonuts = sharedPreferences.getInt("numberOfDonuts", 0);
+        int numberOfPastries = sharedPreferences.getInt("numberOfPastries", 0);
         //Get the donutImages as a String from shared preferences
-        String donutImagesString = sharedPreferences.getString("donutImages", "0");
+        String pastriesImagesString = sharedPreferences.getString("pastriesImages", "0");
         //Turn the donutImagesString back into an int array
-        int[] donutImages = convertToIntArray(donutImagesString);
+        int[] pastryImages = convertToIntArray(pastriesImagesString);
         //Use numberOfDonuts as an index to put the current donut image into the array
-        donutImages[numberOfDonuts] = donut.getDonutImage();
+        pastryImages[numberOfPastries] = pastry.getImage();
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("donutImages", Arrays.toString(donutImages));
+        editor.putString("donutImages", Arrays.toString(pastryImages));
         editor.apply();
 
-        displayDonuts(donutImages);
+        displayPastries(pastryImages);
 
         backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -88,32 +89,32 @@ public class DisplayDonut extends AppCompatActivity {
 
          */
     }
-    private void displayDonuts(int[] donutImages) {
+    private void displayPastries(int[] pastryImages) {         // DisplayPASTRY
         //If an element in the donutImages array is empty (0), replace it with the donut silhouette
-        for (int i = 0; i < donutImages.length; i++) {
-            if (donutImages[i] == 0) {
-                donutImages[i] = DonutBuilder.getDonut("x", "x", "x", this).getDonutImage();
+        for (int i = 0; i < pastryImages.length; i++) {
+            if (pastryImages[i] == 0) {
+                pastryImages[i] = PastryBuilder.getPastry("x", "x", "x", "x", this).getImage();
             }
         }
-        //Set each ImageView to the corresponding donut image
-        donutView1 = findViewById(R.id.donutView1);
-        donutView1.setImageResource(donutImages[0]);
-        donutView2 = findViewById(R.id.donutView2);
-        donutView2.setImageResource(donutImages[1]);
-        donutView3 = findViewById(R.id.donutView3);
-        donutView3.setImageResource(donutImages[2]);
-        donutView4 = findViewById(R.id.donutView4);
-        donutView4.setImageResource(donutImages[3]);
-        donutView5 = findViewById(R.id.donutView5);
-        donutView5.setImageResource(donutImages[4]);
-        donutView6 = findViewById(R.id.donutView6);
-        donutView6.setImageResource(donutImages[5]);
-        donutView7 = findViewById(R.id.donutView7);
-        donutView7.setImageResource(donutImages[6]);
-        donutView8 = findViewById(R.id.donutView8);
-        donutView8.setImageResource(donutImages[7]);
-        donutView9 = findViewById(R.id.donutView9);
-        donutView9.setImageResource(donutImages[8]);
+        //Set each ImageView to the corresponding pastry image
+        pastryView1 = findViewById(R.id.pastryView1);
+        pastryView1.setImageResource(pastryImages[0]);
+        pastryView2 = findViewById(R.id.pastryView2);
+        pastryView2.setImageResource(pastryImages[1]);
+        pastryView3 = findViewById(R.id.pastryView3);
+        pastryView3.setImageResource(pastryImages[2]);
+        pastryView4 = findViewById(R.id.pastryView4);
+        pastryView4.setImageResource(pastryImages[3]);
+        pastryView5 = findViewById(R.id.pastryView5);
+        pastryView5.setImageResource(pastryImages[4]);
+        pastryView6 = findViewById(R.id.pastryView6);
+        pastryView6.setImageResource(pastryImages[5]);
+        pastryView7 = findViewById(R.id.pastryView7);
+        pastryView7.setImageResource(pastryImages[6]);
+        pastryView8 = findViewById(R.id.pastryView8);
+        pastryView8.setImageResource(pastryImages[7]);
+        pastryView9 = findViewById(R.id.pastryView9);
+        pastryView9.setImageResource(pastryImages[8]);
     }
 
     private static int[] convertToIntArray(String string) {

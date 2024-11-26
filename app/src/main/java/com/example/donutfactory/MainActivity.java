@@ -22,12 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
     //Declare all UI components
     private TextView titleView;
-    private TextView donutView;
-    private Spinner donutSpinner;
+    private TextView baseView;
+    private Spinner baseSpinner;
     private TextView icingView;
     private Spinner icingSpinner;
     private TextView sprinkleView;
     private Spinner sprinkleSpinner;
+    private TextView pastryView;
+    private Spinner pastrySpinner;
     private Button bakeButton;
     private final int DONUTIMAGESLENGTH = 9;
     @Override
@@ -44,19 +46,21 @@ public class MainActivity extends AppCompatActivity {
 
         //Set up UI
         titleView = findViewById(R.id.titleView);
-        donutView = findViewById(R.id.donutView);
-        donutSpinner = findViewById(R.id.donutSpinner);
+        baseView = findViewById(R.id.baseView);
+        baseSpinner = findViewById(R.id.baseSpinner);
         icingView = findViewById(R.id.icingView);
         icingSpinner = findViewById(R.id.icingSpinner);
         sprinkleView = findViewById(R.id.sprinkleView);
         sprinkleSpinner = findViewById(R.id.sprinkleSpinner);
+        pastryView = findViewById(R.id.pastryView);
+        pastrySpinner = findViewById(R.id.pastrySpinner);
         bakeButton = findViewById(R.id.button);
 
         //Set up spinners with their options
-        String[] donutTypes = {"Vanilla", "Chocolate"}; //Array of donut type options
+        String[] baseTypes = {"Vanilla", "Chocolate"}; //Array of base type options
         ArrayAdapter<String> donutAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, donutTypes); //Create adapter for donut spinner
-        donutSpinner.setAdapter(donutAdapter);
+                new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, baseTypes); //Create adapter for donut spinner
+        baseSpinner.setAdapter(donutAdapter);
 
         String[] icingTypes = {"None","Chocolate", "Strawberry"};
         ArrayAdapter<String> icingAdapter =
@@ -67,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> sprinkleAdapter =
                 new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sprinkleTypes);
         sprinkleSpinner.setAdapter(sprinkleAdapter);
+
+        String[] pastryTypes = {"Cupcake", "Donut"};
+        ArrayAdapter<String> pastryAdapter =
+                new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, pastryTypes);
+        pastrySpinner.setAdapter(pastryAdapter);
+
 
         //Create a shared preferences file and set the number of donuts to 0
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -102,27 +112,29 @@ public class MainActivity extends AppCompatActivity {
 
     private void bakeDonut() {
         //Get values from spinners
-        String donutChoice = donutSpinner.getSelectedItem().toString().toLowerCase();
+        String baseChoice = baseSpinner.getSelectedItem().toString().toLowerCase();
         String icingChoice = icingSpinner.getSelectedItem().toString().toLowerCase();
         String sprinkleChoice = sprinkleSpinner.getSelectedItem().toString().toLowerCase();
+        String pastryChoice = pastrySpinner.getSelectedItem().toString().toLowerCase();
 
         //Create new Intent object and put selected values into it
         Intent intent = new Intent(MainActivity.this, DisplayDonut.class);
         //Put selected choices into Intent
-        intent.putExtra("donutChoice", donutChoice);
+        intent.putExtra("baseChoice", baseChoice);
         intent.putExtra("icingChoice", icingChoice);
         intent.putExtra("sprinkleChoice", sprinkleChoice);
+        intent.putExtra("pastryChoice" , pastryChoice);
 
-        //Get the number of donuts from the shared preferences and increment it by 1
+        //Get the number of pastries from the shared preferences and increment it by 1
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        int numberOfDonuts = sharedPreferences.getInt("numberOfDonuts", 0);
-        //Incremement number of donuts if it does not exceed the amount of ImageViews
-        if (numberOfDonuts < DONUTIMAGESLENGTH-1) {numberOfDonuts++;}
+        int numberOfPastries = sharedPreferences.getInt("numberOfPastries", 0);
+        //Incremement number of pastries if it does not exceed the amount of ImageViews
+        if (numberOfPastries < DONUTIMAGESLENGTH-1) {numberOfPastries++;}
 
 
-        //Save the new number of donuts to the shared preferences
+        //Save the new number of pastries to the shared preferences
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("numberOfDonuts", numberOfDonuts);
+        editor.putInt("numberOfDonuts", numberOfPastries);
         editor.apply();
 
 

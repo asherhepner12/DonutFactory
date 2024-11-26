@@ -1,18 +1,17 @@
 package com.example.donutfactory;
 
-
 import android.content.Context;
 
-public class Donut extends Pastry{
+public class Cupcake extends Pastry{
 
-    public Donut (String baseChoice, String icingChoice, String sprinkleChoice, Context context) {
+    public Cupcake (String baseChoice, String icingChoice, String sprinkleChoice, Context context) {
         super(baseChoice, icingChoice, sprinkleChoice, context);
 
     }
 
     @Override
     public int getImage() {
-        String donutImageName = baseChoice + "_" + icingChoice + "_" + sprinkleChoice + "_Donut";
+        String donutImageName = baseChoice + "_" + icingChoice + "_" + sprinkleChoice + "_Cupcake";
         int Image = context.getResources().getIdentifier(donutImageName, "drawable", context.getPackageName());
         return Image;
     }
