@@ -49,7 +49,7 @@ public class DisplayDonut extends AppCompatActivity {
 
 
 
-        //Get number of donuts from shared preferences
+        //Get sharedPreferences object
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
 
@@ -68,6 +68,7 @@ public class DisplayDonut extends AppCompatActivity {
         //Use numberOfDonuts as an index to put the current donut image into the array
         donutImages[numberOfDonuts] = donut.getDonutImage();
 
+        //Save the new donutImages array to shared preferences
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("donutImages", Arrays.toString(donutImages));
         editor.apply();
@@ -83,6 +84,7 @@ public class DisplayDonut extends AppCompatActivity {
         });
 
         /*
+        //Debugging the donutImages array
         textView = findViewById(R.id.textView);
         textView.setText(sharedPreferences.getString("donutImages", "0"));
 
@@ -116,6 +118,7 @@ public class DisplayDonut extends AppCompatActivity {
         donutView9.setImageResource(donutImages[8]);
     }
 
+    //Converts a string into an int array; used to convert the donutImagesString back into an int array
     private static int[] convertToIntArray(String string) {
         String[] strings = string.replace("[", "").replace("]", "").split(", ");
         int result[] = new int[strings.length];
