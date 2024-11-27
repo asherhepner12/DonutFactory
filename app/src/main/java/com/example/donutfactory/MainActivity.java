@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView pastryView;
     private Spinner pastrySpinner;
     private Button bakeButton;
-    private final int DONUTIMAGESLENGTH = 9;
+    private final int PASTRYIMAGESLENGTH = 9;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //General onCreate stuff
@@ -81,13 +81,13 @@ public class MainActivity extends AppCompatActivity {
         //Create a shared preferences file and set the number of donuts to 0
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("numberOfDonuts",-1);
+        editor.putInt("numberOfPastries",-1);
 
         //Create a list of donut images and save it to the shared preferences
         //This will be initialized to 0 for all elements
 
-        int[] donutImages = new int[DONUTIMAGESLENGTH];
-        editor.putString("donutImages", Arrays.toString(donutImages));
+        int[] pastriesImages = new int[PASTRYIMAGESLENGTH];
+        editor.putString("pastriesImages", Arrays.toString(pastriesImages));
 
         editor.apply();
 
@@ -105,12 +105,12 @@ public class MainActivity extends AppCompatActivity {
         bakeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bakeDonut();
+                bakePastry();
             }
         });
         }
 
-    private void bakeDonut() {
+    private void bakePastry() {
         //Get values from spinners
         String baseChoice = baseSpinner.getSelectedItem().toString().toLowerCase();
         String icingChoice = icingSpinner.getSelectedItem().toString().toLowerCase();
@@ -129,12 +129,12 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         int numberOfPastries = sharedPreferences.getInt("numberOfPastries", 0);
         //Incremement number of pastries if it does not exceed the amount of ImageViews
-        if (numberOfPastries < DONUTIMAGESLENGTH-1) {numberOfPastries++;}
+        if (numberOfPastries < PASTRYIMAGESLENGTH-1) {numberOfPastries++;}
 
 
         //Save the new number of pastries to the shared preferences
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("numberOfDonuts", numberOfPastries);
+        editor.putInt("numberOfPastries", numberOfPastries);
         editor.apply();
 
 

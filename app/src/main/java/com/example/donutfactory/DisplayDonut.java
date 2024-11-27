@@ -70,7 +70,7 @@ public class DisplayDonut extends AppCompatActivity {
         pastryImages[numberOfPastries] = pastry.getImage();
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("donutImages", Arrays.toString(pastryImages));
+        editor.putString("pastriesImages", Arrays.toString(pastryImages));
         editor.apply();
 
         displayPastries(pastryImages);
