@@ -6,13 +6,15 @@ public class PastryBuilder {
     public static Pastry getPastry(String baseChoice, String icingChoice, String sprinkleChoice, String pastryChoice, Context context) {
         if (pastryChoice.equalsIgnoreCase("Cupcake"))
         {
-            Cupcake cupcake = new Cupcake(baseChoice, icingChoice, sprinkleChoice, context);
-            return cupcake;
+            return new Cupcake(baseChoice, icingChoice, sprinkleChoice, context);
+        }
+        if (pastryChoice.equalsIgnoreCase("Donut"))
+        {
+            return new Donut(baseChoice, icingChoice, sprinkleChoice, context);
         }
         else
         {
-            Donut donut = new Donut(baseChoice, icingChoice, sprinkleChoice, context);
-            return donut;
+            return new Empty(baseChoice, icingChoice, sprinkleChoice, context);
         }
 
     }
