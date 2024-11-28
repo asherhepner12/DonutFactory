@@ -83,11 +83,6 @@ public class DisplayDonut extends AppCompatActivity {
             }
         });
 
-        /*
-        textView = findViewById(R.id.textView);
-        textView.setText(sharedPreferences.getString("donutImages", "0"));
-
-         */
     }
     private void displayPastries(int[] pastryImages) {         // DisplayPASTRY
         //If an element in the donutImages array is empty (0), replace it with the donut silhouette
