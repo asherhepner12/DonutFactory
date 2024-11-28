@@ -59,22 +59,22 @@ public class MainActivity extends AppCompatActivity {
         //Set up spinners with their options
         String[] baseTypes = {"Vanilla", "Chocolate"}; //Array of base type options
         ArrayAdapter<String> donutAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, baseTypes); //Create adapter for donut spinner
+                new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, baseTypes); //Create adapter for donut spinner
         baseSpinner.setAdapter(donutAdapter);
 
         String[] icingTypes = {"None","Chocolate", "Strawberry"};
         ArrayAdapter<String> icingAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, icingTypes);
+                new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, icingTypes);
         icingSpinner.setAdapter(icingAdapter);
 
         String[] sprinkleTypes = {"None", "Chocolate", "White"};
         ArrayAdapter<String> sprinkleAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sprinkleTypes);
+                new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, sprinkleTypes);
         sprinkleSpinner.setAdapter(sprinkleAdapter);
 
         String[] pastryTypes = {"Cupcake", "Donut"};
         ArrayAdapter<String> pastryAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, pastryTypes);
+                new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, pastryTypes);
         pastrySpinner.setAdapter(pastryAdapter);
 
 

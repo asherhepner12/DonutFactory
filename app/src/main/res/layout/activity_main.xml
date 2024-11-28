@@ -19,7 +19,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/icingSpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -33,7 +33,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/baseSpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleView"
         app:layout_constraintVertical_bias="1.0" />
@@ -44,11 +44,11 @@
         android:layout_height="wrap_content"
         android:text="Sprinkle Type"
         android:textAlignment="center"
-        android:textColor="#FDD835"
+        android:textColor="#FFB300"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/sprinkleSpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -61,7 +61,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pastrySpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -112,13 +112,13 @@
         android:layout_width="192dp"
         android:layout_height="48dp"
         android:layout_marginBottom="60dp"
-        android:background="#F0F4C3"
+        android:background="#FFF59D"
         android:popupBackground="@android:color/holo_orange_light"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/pastryView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/pastryView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
         android:id="@+id/pastrySpinner"
