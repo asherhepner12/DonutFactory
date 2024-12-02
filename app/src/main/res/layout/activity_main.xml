@@ -68,7 +68,7 @@
         android:id="@+id/titleView"
         android:layout_width="384dp"
         android:layout_height="60dp"
-        android:text="Pastry Baker"
+        android:text=" "
         android:textAlignment="center"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -146,5 +146,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sprinkleSpinner"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/patisserie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/baseView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/patisserie" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

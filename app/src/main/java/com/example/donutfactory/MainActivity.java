@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         pastryView = findViewById(R.id.pastryView);
         pastrySpinner = findViewById(R.id.pastrySpinner);
         bakeButton = findViewById(R.id.button);
+        ImageView imageView = findViewById(R.id.patisserie);
+        imageView.setImageResource(R.drawable.patisserie);
 
         //Set up spinners with their options
         String[] baseTypes = {"Vanilla", "Chocolate"}; //Array of base type options
