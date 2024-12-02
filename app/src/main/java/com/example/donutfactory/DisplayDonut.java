@@ -30,6 +30,7 @@ public class DisplayDonut extends AppCompatActivity {
     private ImageView pastryView9;
 
     private Button backButton;
+    private Button resetButton;
 
     /*
     //Textview for debugging the donutImages array
@@ -80,6 +81,22 @@ public class DisplayDonut extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+            }
+        });
+
+        resetButton = findViewById(R.id.resetButton);
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Create new Intent object and put selected values into it
+                Intent intent = new Intent(DisplayDonut.this, MainActivity.class);
+                //Put selected choices into Intent
+                intent.putExtra("baseChoice", baseChoice);
+                intent.putExtra("icingChoice", icingChoice);
+                intent.putExtra("sprinkleChoice", sprinkleChoice);
+                intent.putExtra("pastryChoice" , pastryChoice);
+
+                startActivity(intent);
             }
         });
 
